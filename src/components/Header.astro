@@ -1,0 +1,67 @@
+---
+import picture from "../assets/image/header.png";
+---
+
+<header id="hola">
+  <img src={picture.src} alt="image">
+  <div class="content-box"> 
+    <p>predicador</p>
+    <h1>EMANUEL SHARES</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
+  </div>
+</header>
+
+<style lang="scss">
+  @use '../assets/sass/index' as *;
+
+  header {
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 0%), rgba(0,.5,.5, 100%)), url("../assets/image/header.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left; 
+    text-align: left; 
+
+    h1 {
+      margin-top: 100px;
+    }
+    
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    header {
+      background-image: linear-gradient(to bottom, rgba(0, .6,.6, 0%), rgba(0,.2,.2,60%)), url("../assets/image/header.webp");
+      background-size: cover;
+      background-position: center center;
+      overflow: hidden;
+    }
+
+    .content-box {
+      max-width: 600px;
+      
+    }
+
+    .primarybutton {
+      width: 300px;
+      margin: 70px 3%;
+    }
+  }
+</style>
