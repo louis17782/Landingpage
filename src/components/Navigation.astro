@@ -7,15 +7,29 @@
     <div class="nav-container">
       <!-- <img class="logo" src={logo.src} alt=""> -->
       <ul class="navlinks"> 
-        <li><a href="#hola" data-astro-prefetch>INICIO</a></li>
-        <li><a href="#projects" data-astro-prefetch>SOBRE MI</a></li>
-        <li><a href="#about" data-astro-prefetch>INVITACIONES</a></li>
-        <li><a href="#contact" data-astro-prefetch>GALERIA</a></li>
+        <li><a href="/" data-astro-prefetch>INICIO</a></li>
+        <li><a href="#about" data-astro-prefetch>SOBRE MI</a></li>
+        <li><a href="#join" data-astro-prefetch>INVITACIONES</a></li>
+        <li><a href="#gallery" data-astro-prefetch>GALERIA</a></li>
         <li><a href="#contact" data-astro-prefetch>CONTACTO</a></li>
       </ul>
     </div>
   </nav>
 </div>
+
+
+<script>
+  const navLinks = document.querySelectorAll('.navlinks a[href="#about"], .navlinks a[href="#join"], .navlinks a[href="#gallery"], .navlinks a[href="#contact"]');
+
+function closeMenuAfterNavigation() {
+  document.querySelector('.blur-background').classList.remove('active');
+  document.querySelector('nav').classList.remove('active');
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenuAfterNavigation);
+});
+</script>
 
 <style lang="scss">
   @use '../assets/sass/index' as *;

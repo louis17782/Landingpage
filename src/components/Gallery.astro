@@ -9,13 +9,12 @@ import Gallery7 from "../assets/image/flex1.png";
 import Gallery8 from "../assets/image/flex2.png";
 import Left from "../assets/image/left.png";
 import Right from "../assets/image/right.png";
-const {title} = Astro.props;
 const images = [
   Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6, Gallery7, Gallery8
 ];
 ---
 
-<section> 
+<section id="gallery"> 
   <div class="arrow left-arrow" id="leftArrow"><img src={Left.src} alt="Left"></div>
   <div class="arrow right-arrow" id="rightArrow"><img src={Right.src} alt="right"></div>
   <div class="gallery-container">
