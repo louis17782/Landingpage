@@ -54,6 +54,26 @@ import pictureE from "../assets/image/flex3.png";
       </div>
     </div>
 </article>
+<div class="content-text">
+  <div>
+    <h2>Formación</h2>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div>
+    <h2>Formación</h2>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div>
+    <h2>Experiencia</h2>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+</div>
 
 <style lang="scss">
   @use '../assets/sass/index' as *;
@@ -147,6 +167,16 @@ import pictureE from "../assets/image/flex3.png";
 
   article .content-flex {
     margin: 0 5%;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    padding: 50px 0 50px 0;
+    p {
+      margin: 30px 5% 40px;
+    }
   }
 
   @media only screen and (min-width: 1024px) {
