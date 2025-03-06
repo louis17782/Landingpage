@@ -16,7 +16,7 @@ import pictureE from "../assets/image/flex3.png";
 </header>
 <section>
   <div>
-    <h2>sombre mi</h2>
+    <h2>SOBRE MI</h2>
     <div class="underline"></div>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
     Quae et fugiat consequatur deserunt beatae. Provident optio fuga ex officiis et dolorem id,
@@ -36,7 +36,7 @@ import pictureE from "../assets/image/flex3.png";
       Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?</p>
       <div>
         <img src={pictureD.src} alt="image">
-        <h3>Fe y esperanza</h3>
+        <h3>Articulos</h3>
         <br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?
@@ -55,23 +55,24 @@ import pictureE from "../assets/image/flex3.png";
     </div>
 </article>
 <div class="content-text">
-  <div>
-    <h2>Formación</h2>
+  <div class="content-shadow">
+    <h2>EXPERIENCIA</h2>
     <div class="underline"></div>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
     quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
   </div>
-  <div>
-    <h2>Formación</h2>
+  <div class="content-shadow">
+    <h2>OBEJTIVO</h2>
     <div class="underline"></div>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
     quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
   </div>
-  <div>
-    <h2>Experiencia</h2>
+  <div class="content-shadow">
+    <h2>INVITACIONES</h2>
     <div class="underline"></div>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
     quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+    <button class="primarybutton" type="submit">INVITACIÓN</button>
   </div>
 </div>
 
@@ -172,11 +173,21 @@ import pictureE from "../assets/image/flex3.png";
   .content-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $primary;
     padding: 50px 0 50px 0;
+    gap: 20px;
     p {
       margin: 30px 5% 40px;
     }
+  }
+
+  .content-shadow {
+    width: 370px;
+    height: auto;
+    box-shadow: 0 0 25px 15px rgba($secondary, 8%);
+    padding: 20px;
   }
 
   @media only screen and (min-width: 1024px) {
@@ -199,7 +210,6 @@ import pictureE from "../assets/image/flex3.png";
 
     .primarybutton {
       width: 300px;
-      margin: 70px 3%;
     }
   }
 </style>
