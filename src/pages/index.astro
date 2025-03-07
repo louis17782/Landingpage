@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import Form from "../components/Form.astro";
+import Social from "../components/Social.astro";
+import SpanishLayout from "../layouts/SpanishLayout.astro";
+import Gallery from "../components/Gallery.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<SpanishLayout title="portafolio">
+	<Header />
+	<Gallery />
+	<Form />
+	<Social/>
+</SpanishLayout>
+<script>
+	import "../script/mainMenu";
+	import "../script/ValidationForm";
+</script>
+<style lang="scss">
+
+	h2 {
+		margin-top: 70px;
+	}
+	button img {
+		margin: 20px;
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 100%;
+		}
+	}
+</style>

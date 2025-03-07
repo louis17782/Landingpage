@@ -1,0 +1,143 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Openbutton from "../components/Hamburguer.astro";
+const {title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<!-- <link rel="icon" type="image/png" href={logo.src} /> -->
+		<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="portafolio de luis santeliz desarrollador web">
+		<meta name="generator" content={Astro.generator} /> 
+		<title>{title}</title>
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	</head>
+  <body>
+    <Openbutton />
+    <Navigation />
+    <slot />
+  </body>
+</html>
+
+<style is:global lang="scss">
+  @use '../assets/sass/index' as *; 
+    
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  ol, a, li {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: $bold;
+    font-family: $heading;
+    color: $secondary;
+    margin: 0 5%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: $bold;
+    font-family: $heading;
+    color: $secondary;
+    margin: 0 5%;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-family: $heading;
+    font-weight: $bold;
+    color: $secondary;
+    margin: 0 15%; 
+  }
+  
+  .underline {
+    width: 130px;
+    height: 2px;
+    background-color: $secondary;
+    justify-content: left;
+    border-radius: 2px;
+    margin: 0 5% 20px; 
+  }
+  
+  p {
+    font-size: 1.25rem;
+    font-family: $text;
+    font-weight: $regular;
+    color: $secondary;
+    margin: 0 5%; 
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: $regular;
+    font-family: $text;
+    color: $tertiary;
+  }
+  
+  // inicia boton rojo de accion
+  
+  .primarybutton {
+    position: relative; 
+    width: 250px;
+    height: 50px;
+    background-color: $tertiary;
+    color: white;
+    font-size: 1.25rem;
+    font-family: $heading;
+    font-weight: $bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 1;
+    margin: 0 5%;
+
+    &:hover {
+      background-color: #4b4bfa;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 70%),
+      rgba(0, 0, 0, 50%),
+      rgba(0, 0, 0, 0));
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  ::-webkit-scrollbar {
+      width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $primary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #FFD261; 
+      border-radius: 10px;
+  }
+</style>

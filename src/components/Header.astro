@@ -1,0 +1,326 @@
+---
+import picture from "../assets/image/header.png";
+import PictureB from "../assets/image/about.png";
+import pictureD from "../assets/image/flex2.png";
+import pictureE from "../assets/image/flex3.png";
+---
+
+<header id="home">
+  <div class="content-box"> 
+    <p>PREDICADOR</p>
+    <h1>EMANUEL SHARES</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
+  </div>
+  <img id="animationA" src={picture.src} alt="image">
+</header>
+<div class="content-text" id="join">
+  <div class="content-shadow">
+    <h3>EXPERIENCIA</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div class="content-shadow">
+    <h3>OBEJTIVO</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div class="content-shadow">
+    <h3>INVITACIONES</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+</div>
+<section id="about">
+  <div>
+    <h2>SOBRE MI</h2>
+    <div class="underline"></div>
+    <p>Lorem ipsum consequatur repellendus praesentium esse rem exercitationem ipsam.
+    Voluptatibus iste, voluptatum, aut quasi illo, doloribus dolorem labore unde atque cum eum.</p>
+    <button class="primarybutton" type="submit">INVITACIÓN</button>
+  </div>
+  <img src={PictureB.src} alt="image">
+</section>
+<article> 
+  <div class="content-gap"  id="animationB">
+    <img src={pictureE.src} alt="image">
+    <h3>Fe y esperanza</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+    laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
+  <div class="content-gap">
+    <img src={pictureD.src} alt="image">
+    <h3>Articulos</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
+  <div class="content-gap" id="animation-content">
+    <img src={pictureE.src} alt="image">
+    <h3>Fe y esperanza</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
+</article>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('animationB');
+    const content = document.getElementById('animation-content');
+    
+    function handleScroll() {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionTopContent = content.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+  
+        if (sectionTop < windowHeight) {
+            section.classList.add('animate');
+        }
+
+        if (sectionTopContent < windowHeight) {
+            content.classList.add('animate');
+        }
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); 
+  });
+</script>
+
+
+<style lang="scss">
+  @use '../assets/sass/index' as *;
+
+  #animation-content {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.9s ease-out;
+    overflow: hidden;
+
+    &.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  #animationB {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.9s ease-out;
+
+    &.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  #animationA {
+    animation: shrink 6s forwards;
+  }
+
+  @keyframes shrink {
+    from {
+      width: 120%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin: 50px 5%;
+  }
+
+  header {
+    position: relative;
+    background-image: url("/src/assets//image/backgound.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 50px 0 50px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 100%),
+      rgba(0, 0, 0, 80%),
+      rgba(0, 0, 0, 0));
+      pointer-events: none
+    }
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    text-align: left; 
+    z-index: 1;
+    p {
+      margin-top: 15px;
+    }
+  }
+
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    padding: 50px 0 50px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 100%),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0));
+      pointer-events: none
+    }
+    p{
+      max-width: 70%; 
+    }
+  }
+
+  section img {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  article {
+    background-color: $primary;
+    padding: 50px 0 50px 0;
+
+    h3, p {
+      margin: 0;
+    }
+  }
+
+  article img {
+    width: 100%;
+  }
+
+  article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .content-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    padding: 50px 0 50px 0;
+    gap: 45px;
+  }
+
+  .content-shadow {
+    width: 370px;
+    height: auto;
+    box-shadow: 0 0 25px 15px rgba($secondary, 8%);
+    padding: 20px;
+  }
+
+  h3 {
+    margin: 0 5%;
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    gap: 85px;
+  }
+
+  article .content-gap {
+    width: 370px;
+    height: auto;
+  }
+
+  @media only screen and (min-width: 1024px) {
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    header {
+      flex-direction: row;
+      background-image: url("/src/assets/image/backgoundDesk.png");
+      &::after {
+       content: '';
+        background: linear-gradient(to top, rgba(0, 0, 0, 100%),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0));
+      }
+    }
+
+    header img {
+      width: 55%;
+    }
+
+    .content-box {
+      justify-content: center;
+      align-items: left; 
+      text-align: left; 
+    }
+
+    section {
+      flex-direction: row;
+    }
+
+    .primarybutton {
+      width: 300px;
+    }
+
+    .content-text {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    article {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+  }
+
+  article .content-gap {
+    width: 350px;
+  }
+
+  @keyframes shrink {
+    from {
+      width: 60%;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  }
+</style>
