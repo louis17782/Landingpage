@@ -7,77 +7,77 @@ import pictureE from "../assets/image/flex3.png";
 ---
 
 <header id="home">
-  <img src={picture.src} alt="image">
   <div class="content-box"> 
     <p>PREDICADOR</p>
     <h1>EMANUEL SHARES</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
   </div>
+  <img src={picture.src} alt="image">
 </header>
+<div class="content-text" id="join">
+  <div class="content-shadow">
+    <h3>EXPERIENCIA</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div class="content-shadow">
+    <h3>OBEJTIVO</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+  <div class="content-shadow">
+    <h3>INVITACIONES</h3>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
+    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+  </div>
+</div>
 <section id="about">
   <div>
     <h2>SOBRE MI</h2>
     <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-    Quae et fugiat consequatur deserunt beatae. Provident optio fuga ex officiis et dolorem id,
-    quasi ducimus illo labore sint ea sapiente natus, consequatur repellendus praesentium esse rem exercitationem ipsam.
+    <p>Lorem ipsum consequatur repellendus praesentium esse rem exercitationem ipsam.
     Voluptatibus iste, voluptatum, aut quasi illo, doloribus dolorem labore unde atque cum eum.</p>
+    <button class="primarybutton" type="submit">INVITACIÓN</button>
   </div>
   <img src={PictureB.src} alt="image">
 </section>
-<article>
-  <div class="content-flex">
-    <img src={pictureC.src} alt="image">
-      <h3>Fe y esperanza</h3>
-      <br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?</p>
-      <div>
-        <img src={pictureD.src} alt="image">
-        <h3>Articulos</h3>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?</p>
-      </div>
-      <div>
-        <img src={pictureE.src} alt="image">
-        <h3>Fe y esperanza</h3>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Sunt cumque nesciunt odio. Eum laudantium tempora ipsam architecto et pariatur praesentium?</p>
-      </div>
-    </div>
+<article> 
+  <div class="content-gap">
+    <img src={pictureE.src} alt="image">
+    <h3>Fe y esperanza</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+    laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
+  <div class="content-gap">
+    <img src={pictureD.src} alt="image">
+    <h3>Articulos</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
+  <div class="content-gap">
+    <img src={pictureE.src} alt="image">
+    <h3>Fe y esperanza</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
+      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+  </div>
 </article>
-<div class="content-text" id="join">
-  <div class="content-shadow">
-    <h2>EXPERIENCIA</h2>
-    <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
-  </div>
-  <div class="content-shadow">
-    <h2>OBEJTIVO</h2>
-    <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
-  </div>
-  <div class="content-shadow">
-    <h2>INVITACIONES</h2>
-    <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
-    <button class="primarybutton" type="submit">INVITACIÓN</button>
-  </div>
-</div>
+
 
 <style lang="scss">
   @use '../assets/sass/index' as *;
+
+  button {
+    margin: 50px 5%;
+  }
 
   header {
     position: relative;
@@ -85,13 +85,10 @@ import pictureE from "../assets/image/flex3.png";
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    overflow: hidden;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 50px 0 50px 0;
 
     &::after {
       content: '';
@@ -107,14 +104,9 @@ import pictureE from "../assets/image/flex3.png";
     }
   }
 
-  header img {
-    width: 100%;
-  }
-
   .content-box {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     align-items: left; 
     text-align: left; 
     z-index: 1;
@@ -144,6 +136,9 @@ import pictureE from "../assets/image/flex3.png";
       rgba(0, 0, 0, 0));
       pointer-events: none
     }
+    p{
+      max-width: 70%; 
+    }
   }
 
   section img {
@@ -152,7 +147,6 @@ import pictureE from "../assets/image/flex3.png";
   }
 
   article {
-    display: flex;
     background-color: $primary;
     padding: 50px 0 50px 0;
 
@@ -162,25 +156,27 @@ import pictureE from "../assets/image/flex3.png";
   }
 
   article img {
-    margin-top: 50px;
     width: 100%;
   }
 
-  article .content-flex {
-    margin: 0 5%;
+  article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
   }
 
   .content-text {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: $primary;
     padding: 50px 0 50px 0;
-    gap: 20px;
-    p {
-      margin: 30px 5% 40px;
-    }
+    gap: 45px;
   }
 
   .content-shadow {
@@ -190,6 +186,24 @@ import pictureE from "../assets/image/flex3.png";
     padding: 20px;
   }
 
+  h3 {
+    margin: 0 5%;
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    gap: 85px;
+  }
+
+  article .content-gap {
+    width: 370px;
+    height: auto;
+  }
+
   @media only screen and (min-width: 1024px) {
 
     h1 {
@@ -197,19 +211,48 @@ import pictureE from "../assets/image/flex3.png";
     }
 
     header {
-      background-image: linear-gradient(to bottom, rgba(0, .6,.6, 0%), rgba(0,.2,.2,60%)), url("/src/assets/image/backgoundDesk.png");
-      background-size: cover;
-      background-position: center center;
-      overflow: hidden;
+      flex-direction: row;
+      background-image: url("/src/assets/image/backgoundDesk.png");
+      &::after {
+       content: '';
+        background: linear-gradient(to top, rgba(0, 0, 0, 100%),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0));
+      }
+    }
+
+    header img {
+      width: 55%;
     }
 
     .content-box {
-      max-width: 600px;
-      
+      justify-content: center;
+      align-items: left; 
+      text-align: left; 
+    }
+
+    section {
+      flex-direction: row;
     }
 
     .primarybutton {
       width: 300px;
     }
+
+    .content-text {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    article {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+  }
+
+  article .content-gap {
+    width: 350px;
+  }
   }
 </style>
