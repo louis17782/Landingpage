@@ -1,7 +1,6 @@
 ---
 import picture from "../assets/image/header.png";
 import PictureB from "../assets/image/about.png";
-import pictureC from "../assets/image/flex1.png";
 import pictureD from "../assets/image/flex2.png";
 import pictureE from "../assets/image/flex3.png";
 ---
@@ -12,7 +11,7 @@ import pictureE from "../assets/image/flex3.png";
     <h1>EMANUEL SHARES</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
   </div>
-  <img src={picture.src} alt="image">
+  <img id="animationA" src={picture.src} alt="image">
 </header>
 <div class="content-text" id="join">
   <div class="content-shadow">
@@ -45,7 +44,7 @@ import pictureE from "../assets/image/flex3.png";
   <img src={PictureB.src} alt="image">
 </section>
 <article> 
-  <div class="content-gap">
+  <div class="content-gap"  id="animationB">
     <img src={pictureE.src} alt="image">
     <h3>Fe y esperanza</h3>
     <br>
@@ -61,7 +60,7 @@ import pictureE from "../assets/image/flex3.png";
       Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
       laudantium tempora ipsam architecto et pariatur praesentium?</p>
   </div>
-  <div class="content-gap">
+  <div class="content-gap" id="animation-content">
     <img src={pictureE.src} alt="image">
     <h3>Fe y esperanza</h3>
     <br>
@@ -71,9 +70,69 @@ import pictureE from "../assets/image/flex3.png";
   </div>
 </article>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('animationB');
+    const content = document.getElementById('animation-content');
+    
+    function handleScroll() {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionTopContent = content.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+  
+        if (sectionTop < windowHeight) {
+            section.classList.add('animate');
+        }
+
+        if (sectionTopContent < windowHeight) {
+            content.classList.add('animate');
+        }
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); 
+  });
+</script>
+
 
 <style lang="scss">
   @use '../assets/sass/index' as *;
+
+  #animation-content {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.9s ease-out;
+    overflow: hidden;
+
+    &.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  #animationB {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.9s ease-out;
+
+    &.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  #animationA {
+    animation: shrink 6s forwards;
+  }
+
+  @keyframes shrink {
+    from {
+      width: 120%;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
   button {
     margin: 50px 5%;
@@ -253,6 +312,15 @@ import pictureE from "../assets/image/flex3.png";
 
   article .content-gap {
     width: 350px;
+  }
+
+  @keyframes shrink {
+    from {
+      width: 60%;
+    }
+    to {
+      width: 50%;
+    }
   }
   }
 </style>
