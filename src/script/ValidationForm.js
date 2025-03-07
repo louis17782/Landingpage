@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const confirmationMessage = document.createElement('p');
-    confirmationMessage.textContent = 'Your message has been sent successfully!';
+    confirmationMessage.textContent = 'Tu mensaje fue enviado con éxito..!';
     confirmationMessage.classList.add('confirmation-message');
     confirmationMessage.style.fontSize = '2rem';
     confirmationMessage.style.fontWeight = 'bold';
     confirmationMessage.style.marginTop = '1rem';
     confirmationMessage.style.textAlign = 'center';
-    confirmationMessage.style.marginTop = '50px';
+    confirmationMessage.style.padding = '50px';
 
     form.parentNode.appendChild(confirmationMessage); 
 
