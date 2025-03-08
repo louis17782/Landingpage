@@ -46,7 +46,7 @@ import pictureE from "../assets/image/flex3.png";
 <article> 
   <div class="content-gap"  id="animationB">
     <img src={pictureE.src} alt="image">
-    <h3>Fe y esperanza</h3>
+    <h3>Fé</h3>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
@@ -54,7 +54,7 @@ import pictureE from "../assets/image/flex3.png";
   </div>
   <div class="content-gap" id="animation-second">
     <img src={pictureD.src} alt="image">
-    <h3>Articulos</h3>
+    <h3>Oración</h3>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
@@ -62,7 +62,7 @@ import pictureE from "../assets/image/flex3.png";
   </div>
   <div class="content-gap" id="animation-content">
     <img src={pictureE.src} alt="image">
-    <h3>Fe y esperanza</h3>
+    <h3>Testimonio</h3>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
@@ -76,13 +76,19 @@ import pictureE from "../assets/image/flex3.png";
     const content = document.getElementById('animation-content');
     const sectionSecond = document.getElementById('animation-second');
     const about = document.getElementsByClassName('about-content')[0];
+    const header = document.getElementById('animationA');
     
     function handleScroll() {
+      const sectionHeader = header.getBoundingClientRect().top;
         const sectionAbout = about.getBoundingClientRect().top;
         const sectionTopSecond = sectionSecond.getBoundingClientRect().top;
         const sectionTop = section.getBoundingClientRect().top;
         const sectionTopContent = content.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
+
+        if (sectionHeader < windowHeight) {
+            header.classList.add('animate');
+        }
   
         if (sectionTop < windowHeight) {
             section.classList.add('animate');
@@ -109,6 +115,17 @@ import pictureE from "../assets/image/flex3.png";
 
 <style lang="scss">
   @use '../assets/sass/index' as *;
+
+  #animationA {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   .about-content {
     opacity: 0;
@@ -162,19 +179,6 @@ import pictureE from "../assets/image/flex3.png";
     width: 100%;
     animation: shrink 6s forwards;
     z-index: 0;
-  }
-
-  #animationA {
-    animation: shrink 6s forwards;
-  }
-
-  @keyframes shrink {
-    from {
-      width: 120%;
-    }
-    to {
-      width: 100%;
-    }
   }
 
   button {
