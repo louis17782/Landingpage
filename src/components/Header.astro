@@ -1,6 +1,6 @@
 ---
-import picture from "../assets/image/header.png";
-import PictureB from "../assets/image/about.png";
+import picture from "../assets/image/header.webp";
+import PictureB from "../assets/image/about.webp";
 import pictureD from "../assets/image/flex2.png";
 import pictureE from "../assets/image/flex3.png";
 ---
@@ -352,6 +352,16 @@ import pictureE from "../assets/image/flex3.png";
 
     section {
       flex-direction: row;
+      &::after {
+      content: '';
+      background: linear-gradient(to top, rgba(0, 0, 0, 100%),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0));
+    }
+    }
+
+    section img {
+      width: 50%;
     }
 
     .primarybutton {
