@@ -82,6 +82,7 @@ navLinks.forEach(link => {
     text-align: center;
     font-size: 1.7rem;
     color: $secondary;
+    cursor: pointer;
   }
 
   li:hover {
@@ -123,10 +124,13 @@ navLinks.forEach(link => {
     border: none;
     cursor: pointer;
     z-index: 99;
+    width: 50px;
+    height: 50px;
   }
 
   .ph-x {
-    font-size: 3rem;
+    font-size: 2rem;
+    pointer-events: none;
   }
 
   .nav-container {
