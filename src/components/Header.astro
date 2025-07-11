@@ -1,17 +1,17 @@
 ---
-import picture from "../assets/image/header.webp";
-import PictureB from "../assets/image/about.webp";
-import pictureD from "../assets/image/flex2.png";
-import pictureE from "../assets/image/flex3.png";
+
+import PictureB from "../assets/image/web1.webp";
+import pictureD from "../assets/image/web2.webp";
+import pictureE from "../assets/image/web3.webp";
+import pictureF from "../assets/image/web4.webp";
 ---
 
 <header id="home">
-  <div class="content-box"> 
+  <div class="content-box" id="animationA"> 
     <p>PREDICADOR</p>
     <h1>EMANUEL SHARES</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
   </div>
-  <img id="animationA" src={picture.src} alt="image">
 </header>
 <div class="content-text" id="join">
   <div class="content-shadow">
@@ -55,7 +55,7 @@ import pictureE from "../assets/image/flex3.png";
     laudantium tempora ipsam architecto et pariatur praesentium?</p>
   </div>
   <div class="content-gap" id="animation-second">
-    <img src={pictureD.src} alt="image">
+    <img src={pictureF.src} alt="image">
     <h3>Oración</h3>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -63,7 +63,7 @@ import pictureE from "../assets/image/flex3.png";
       laudantium tempora ipsam architecto et pariatur praesentium?</p>
   </div>
   <div class="content-gap" id="animation-content">
-    <img src={pictureE.src} alt="image">
+    <img src={pictureD.src} alt="image">
     <h3>Testimonio</h3>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -181,7 +181,7 @@ import pictureE from "../assets/image/flex3.png";
     position: absolute;
     top: 90px;
     bottom: 0;
-    width: 100%;
+    max-width: 100%;
     animation: shrink 6s forwards;
     z-index: 0;
   }
@@ -192,7 +192,7 @@ import pictureE from "../assets/image/flex3.png";
 
   header {
     position: relative;
-    background-image: url("/src/assets//image/backgound.png");
+    background-image: url("/src/assets/image/web3.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -330,24 +330,19 @@ import pictureE from "../assets/image/flex3.png";
 
     header {
       flex-direction: row;
-      background-image: url("/src/assets/image/backgoundDesk.png");
+      background-image: url("/src/assets/image/web5.webp");
       &::after {
        content: '';
-        background: linear-gradient(to top, rgba(0, 0, 0, 100%),
-        rgba(0, 0, 0, 0),
+        background: linear-gradient(to top,
+        rgba(0, 0, 0, 100%),
+        rgba(0, 0, 0, 40%),
         rgba(0, 0, 0, 0));
       }
-      height: 100vh;
-    }
-
-    header img {
-      width: 55%;
+      height: 130vh;
     }
 
     .content-box {
-      justify-content: center;
-      align-items: left; 
-      text-align: left; 
+      justify-content:end;
     }
 
     section {
