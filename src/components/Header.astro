@@ -76,49 +76,6 @@ import picture from "../assets/image/post1.png";
   </a>  
 </article>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const section = document.getElementById('animationB');
-    const content = document.getElementById('animation-content');
-    const sectionSecond = document.getElementById('animation-second');
-    const about = document.getElementsByClassName('about-content')[0];
-    const header = document.getElementById('animationA');
-    
-    function handleScroll() {
-      const sectionHeader = header.getBoundingClientRect().top;
-        const sectionAbout = about.getBoundingClientRect().top;
-        const sectionTopSecond = sectionSecond.getBoundingClientRect().top;
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionTopContent = content.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (sectionHeader < windowHeight) {
-            header.classList.add('animate');
-        }
-  
-        if (sectionTop < windowHeight) {
-            section.classList.add('animate');
-        }
-
-        if (sectionTopContent < windowHeight) {
-            content.classList.add('animate');
-        }
-
-        if (sectionTopSecond < windowHeight) {
-            sectionSecond.classList.add('animate');
-        }
-
-        if (sectionAbout < windowHeight) {
-            about.classList.add('animate');
-        }
-    }
-  
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
-  });
-</script>
-
-
 <style lang="scss">
   @use '../assets/sass/index' as *;
 
@@ -193,10 +150,11 @@ import picture from "../assets/image/post1.png";
 
   header {
     position: relative;
-    background-image: url("/src/assets/image/post1.webp");
+    background-image: url("/src/assets/image/post2.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-color: black;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -331,7 +289,7 @@ import picture from "../assets/image/post1.png";
 
     header {
       flex-direction: row;
-      background-image: url("/src/assets/image/post1.webp");
+      background-image: url("/src/assets/image/post2.webp");
       &::after {
        content: '';
         background: linear-gradient(to top,
