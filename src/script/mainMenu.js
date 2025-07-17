@@ -21,42 +21,4 @@ navLinks.forEach(link => {
 });
 
 // click
-   document.addEventListener('DOMContentLoaded', () => {
-    const section = document.getElementById('animationB');
-    const content = document.getElementById('animation-content');
-    const sectionSecond = document.getElementById('animation-second');
-    const about = document.getElementsByClassName('about-content')[0];
-    const header = document.getElementById('animationA');
-    
-    function handleScroll() {
-      const sectionHeader = header.getBoundingClientRect().top;
-        const sectionAbout = about.getBoundingClientRect().top;
-        const sectionTopSecond = sectionSecond.getBoundingClientRect().top;
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionTopContent = content.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
 
-        if (sectionHeader < windowHeight) {
-            header.classList.add('animate');
-        }
-  
-        if (sectionTop < windowHeight) {
-            section.classList.add('animate');
-        }
-
-        if (sectionTopContent < windowHeight) {
-            content.classList.add('animate');
-        }
-
-        if (sectionTopSecond < windowHeight) {
-            sectionSecond.classList.add('animate');
-        }
-
-        if (sectionAbout < windowHeight) {
-            about.classList.add('animate');
-        }
-    }
-  
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
-  });
