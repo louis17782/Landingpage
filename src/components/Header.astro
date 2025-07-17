@@ -120,7 +120,11 @@ import pictureF from "../assets/image/web4.webp";
   @use '../assets/sass/index' as *;
 
   // Animaciones
-  #animationA, .about-content, #animation-second, #animation-content, #animationB {
+  #animationA, 
+  .about-content, 
+  #animation-second, 
+  #animation-content, 
+  #animationB {
     opacity: 0;
     transition: opacity 0.9s ease-out, transform 0.9s ease-out;
     &.animate {
@@ -128,17 +132,20 @@ import pictureF from "../assets/image/web4.webp";
       transform: none;
     }
   }
-  #animationA, .about-content {
+  #animationA, 
+  .about-content {
     transform: translateY(30px);
   }
-  #animation-second, #animation-content, #animationB {
+  #animation-second, 
+  #animation-content,
+  #animationB {
     transform: translateX(-100%);
   }
 
   // Header
   header {
     position: relative;
-    background-image: url("/src/assets/image/post2.webp");
+    background-image: url("/src/assets/image/head.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
