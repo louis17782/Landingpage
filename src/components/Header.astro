@@ -10,35 +10,51 @@ import pictureF from "../assets/image/web4.webp";
   <div class="content-box" id="animationA"> 
     <p>PREDICADOR</p>
     <h1>EMANUEL SHARES</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, odit?</p>
+    <p>Predico para encender corazones, y ver cómo Dios transforma vidas por su Espíritu.</p>
   </div>
 </header>
 <div class="content-text" id="join">
   <div class="content-shadow">
     <h3>EXPERIENCIA</h3>
     <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+    <p>Evangelista desde 2012, inicié mi ministerio a los 17 años. Fui ordenado pastor a los 20, sirviendo en Venezuela,
+      América Latina y Estados Unidos. Actualmente pastoreo en Homeway Church, Florida. Más allá de los eventos y las plataformas,
+      he aprendido a valorar los procesos y la obediencia.
+      Cada predicación ha sido una oportunidad para ver la mano de Dios transformando vidas.
+    </p>
   </div>
   <div class="content-shadow">
     <h3>OBJETIVO</h3>
     <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+    <p>Llevar la Palabra con claridad, fuego y verdad.
+      Mi misión es despertar fe, activar propósitos y levantar discípulos comprometidos con el Reino.
+      Donde Dios abra la puerta, estaré listo para servir.
+    </p>
   </div>
   <div class="content-shadow">
     <h3>INVITACIONES</h3>
     <div class="underline"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus minima
-    quis nobis blanditiis nesciunt culpa aliquam nulla molestiae veniam reprehenderit.</p>
+    <p>¿Deseas que predique en tu iglesia, congreso o retiro?
+      Estoy disponible para:
+      •	Eventos juveniles
+      •	Vigilias, campamentos y congresos
+      •	Cultos especiales y entrenamientos de liderazgo
+    </p>
   </div>
 </div>
 <section id="about">
   <div class="about-content">
     <h2>SOBRE MI</h2>
     <div class="underline"></div>
-    <p>Lorem ipsum consequatur repellendus praesentium esse rem exercitationem ipsam.
-    Voluptatibus iste, voluptatum, aut quasi illo, doloribus dolorem labore unde atque cum eum.</p>
+     <p>
+    Soy Emanuel Shares (Bracho), pastor, evangelista y predicador desde los 17 años.
+    A los 15 entregué mi vida a Cristo. A los 17 comencé a evangelizar. A los 20 fui ordenado pastor en Venezuela.
+  </p>
+  <p>
+    Hoy sirvo como pastor en Homeway Church (Florida), con un solo propósito: compartir lo que Dios me ha dado. Por eso adopté el apellido “Shares”:
+    porque tengo algo eterno que compartir con cada persona que me escucha.
+    Mi pasión es predicar con poder, discipular con profundidad y encender corazones con el fuego del Espíritu.
+  </p>
     <a href="http://wa.me/+19545528230" target="_blank">
       <button class="primarybutton" type="button">Hazme una invitación</button>
     </a> 
@@ -50,30 +66,38 @@ import pictureF from "../assets/image/web4.webp";
     <img src={pictureE.src} alt="image">
     <h3>Fé</h3>
     <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
-    laudantium tempora ipsam architecto et pariatur praesentium?</p>
+    <p>A los 15 creí. A los 17 prediqué. Y desde entonces, vivo por fe.
+      Predico una fe que provoca acción, milagros y transformación.
+      “La fe ve lo invisible y confía en lo eterno.
+    </p>
   </div>
   <div class="content-gap" id="animation-second">
     <img src={pictureF.src} alt="image">
     <h3>Oración</h3>
     <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
-      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+    <p>¿Tienes una carga? Estoy aquí para orar contigo.
+      Llena el formulario y la llevaré a la presencia de Dios.
+      “Clama a mí y yo te responderé…” – Jeremías 33:3
+    </p>
   </div>
   <div class="content-gap" id="animation-content">
     <img src={pictureD.src} alt="image">
     <h3>Testimonio</h3>
     <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Sunt cumque nesciunt odio. Sunt cumque nesciunt odio. Eum 
-      laudantium tempora ipsam architecto et pariatur praesentium?</p>
+    <p>A los 15 años Cristo me encontró y me dio propósito.
+      Desde entonces, todo lo que hago es para reflejar lo que Él hizo conmigo.
+      Hoy predico porque fui transformado. Hoy sirvo porque fui restaurado.
+      En Homeway Church, sigo viendo vidas cambiar… y sé que esto apenas comienza.
+    </p>
   </div>
   <a href="http://wa.me/+19545528230" target="_blank">
-    <button class="primarybutton" type="button">Petición de oración</button>
+    <button class="primarybutton" type="button">Escribeme ahora</button>
   </a>  
 </article>
+<!-- Botón Volver Arriba -->
+<button id="backToTop" aria-label="Volver arriba">
+  ↑
+</button>
 <script>
      document.addEventListener('DOMContentLoaded', () => {
     const section = document.getElementById('animationB');
@@ -114,6 +138,20 @@ import pictureF from "../assets/image/web4.webp";
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
   });
+    // Mostrar el botón cuando se hace scroll
+  window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 1200) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+  // Scroll suave al header
+  document.getElementById('backToTop').onclick = function() {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+  };
 </script>
 
 <style lang="scss">
@@ -199,8 +237,14 @@ import pictureF from "../assets/image/web4.webp";
       background: linear-gradient(to top, rgba(0, 0, 0, 70%), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
       pointer-events: none;
     }
-    p { max-width: 70%; }
-    img { margin-top: 30px; width: 100%; }
+    p { 
+      max-width: 70%; 
+      margin-bottom: 1.2em;
+    }
+    img { 
+      margin-top: 30px; 
+      width: 100%;
+    }
   }
 
   // Article
@@ -236,17 +280,36 @@ import pictureF from "../assets/image/web4.webp";
     background-color: $primary;
     padding: 50px 0;
     gap: 45px;
-    position: relative;
     z-index: 1;
   }
   .content-shadow {
-    width: 370px;
+    width: 400px;
+    height: 350px;
     box-shadow: 0 0 25px 15px rgba($secondary, 8%);
     padding: 20px;
-    z-index: 1;
   }
 
   h3 { margin: 0 5%; }
+
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 0px;
+    width: 48px;
+    background: $primary;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background 0.2s;
+  }
+ #backToTop:hover {
+  background: darken($primary, 10%);
+ }
 
   // Responsive
   @media only screen and (min-width: 1024px) {
