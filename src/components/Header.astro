@@ -65,7 +65,6 @@ import pictureF from "../assets/image/web4.webp";
   <div class="content-gap"  id="animationB">
     <img src={pictureE.src} alt="image">
     <h3>Fé</h3>
-    <br>
     <p>A los 15 creí. A los 17 prediqué. Y desde entonces, vivo por fe.
       Predico una fe que provoca acción, milagros y transformación.
       “La fe ve lo invisible y confía en lo eterno.
@@ -74,7 +73,6 @@ import pictureF from "../assets/image/web4.webp";
   <div class="content-gap" id="animation-second">
     <img src={pictureF.src} alt="image">
     <h3>Oración</h3>
-    <br>
     <p>¿Tienes una carga? Estoy aquí para orar contigo.
       Llena el formulario y la llevaré a la presencia de Dios.
       “Clama a mí y yo te responderé…” – Jeremías 33:3
@@ -83,7 +81,7 @@ import pictureF from "../assets/image/web4.webp";
   <div class="content-gap" id="animation-content">
     <img src={pictureD.src} alt="image">
     <h3>Testimonio</h3>
-    <br>
+   
     <p>A los 15 años Cristo me encontró y me dio propósito.
       Desde entonces, todo lo que hago es para reflejar lo que Él hizo conmigo.
       Hoy predico porque fui transformado. Hoy sirvo porque fui restaurado.
@@ -254,12 +252,21 @@ import pictureF from "../assets/image/web4.webp";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 85px;
-    h3, p { margin: 0; }
-    button { margin: 0; }
-    .content-gap { width: 370px; height: auto; }
-    img { width: 100%; }
+    h3, p {
+      margin: 0; 
+    }
+    button { 
+      margin: 0; 
+    }
+    .content-gap { 
+      width: 370px; 
+      height: auto;
+    }
+    img { 
+      width: 100%; 
+    }
     div {
       display: flex;
       flex-direction: column;
@@ -307,9 +314,6 @@ import pictureF from "../assets/image/web4.webp";
     z-index: 1000;
     transition: background 0.2s;
   }
- #backToTop:hover {
-  background: darken($primary, 10%);
- }
 
   // Responsive
   @media only screen and (min-width: 1024px) {
@@ -333,7 +337,10 @@ import pictureF from "../assets/image/web4.webp";
     }
     .primarybutton { width: 300px; }
     .content-text { flex-direction: row; }
-    article { flex-direction: row; }
-    article .content-gap { width: 350px; }
-  }
+    article { 
+      flex-direction: row; 
+    }
+    article .content-gap { 
+      width: 350px; }
+    }
 </style>
