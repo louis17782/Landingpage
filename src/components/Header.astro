@@ -81,17 +81,18 @@ import pictureF from "../assets/image/web4.webp";
   <div class="content-gap" id="animation-content">
     <img src={pictureD.src} alt="image">
     <h3>Testimonio</h3>
-   
     <p>A los 15 años Cristo me encontró y me dio propósito.
       Desde entonces, todo lo que hago es para reflejar lo que Él hizo conmigo.
       Hoy predico porque fui transformado. Hoy sirvo porque fui restaurado.
       En Homeway Church, sigo viendo vidas cambiar… y sé que esto apenas comienza.
     </p>
   </div>
+</article>
+<div class="button-container">
   <a href="http://wa.me/+19545528230" target="_blank">
     <button class="primarybutton" type="button">Escribeme ahora</button>
-  </a>  
-</article>
+  </a> 
+</div>
 <!-- Botón Volver Arriba -->
 <button id="backToTop" aria-label="Volver arriba">
   ↑
@@ -190,7 +191,7 @@ import pictureF from "../assets/image/web4.webp";
     flex-direction: column-reverse;
     justify-content: space-between;
     padding: 50px 0;
-    height: 80vh;
+    height: 800px;
     &::after {
       content: '';
       position: absolute;
@@ -314,6 +315,13 @@ import pictureF from "../assets/image/web4.webp";
     z-index: 1000;
     transition: background 0.2s;
   }
+
+ .button-container {
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
   // Responsive
   @media only screen and (min-width: 1024px) {
