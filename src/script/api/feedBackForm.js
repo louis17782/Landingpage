@@ -8,7 +8,7 @@ const form = document.getElementById('contact-form');
     const message = form.message.value;
 
     try {
-      const response = await fetch('https://landingpage-express-mailer-landingpage-expressmailer.up.railway.app/send-email', {
+      const response = await fetch('http://landingpage-express-mailer-landingpage-expressmailer.up.railway.app/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
