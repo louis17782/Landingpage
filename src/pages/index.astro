@@ -3,17 +3,20 @@ import Header from "../components/Header.astro";
 import Form from "../components/Form.astro";
 import Social from "../components/Social.astro";
 import SpanishLayout from "../layouts/SpanishLayout.astro";
+import Modal from "../components/modalData.astro"
 import Gallery from "../components/Gallery.astro";
 ---
 
 <SpanishLayout title="Predicador">
 	<Header />
+	<Modal />
 	<Gallery />
 	<Form />
 	<Social/>
 </SpanishLayout>
 <script>
 	import "../script/mainMenu";
+	import "../script/modal";
 	import "../script/api/feedBackForm"
 </script>
 	
